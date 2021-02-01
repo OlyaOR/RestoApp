@@ -1,39 +1,110 @@
 {
-	"menu": [
-		{
-			"title": "Cesar salad",
-			"price": 12,
-			"url": "https://static.1000.menu/img/content/21458/-salat-cezar-s-kr-salat-cezar-s-krevetkami-s-maionezom_1501173720_1_max.jpg",
-			"category": "salads",
-			"id": 1
-		},
-		{
-			"title": "Pizza Margherita",
-			"price": 10,
-			"url": "http://www.academiabarilla.com/anteprima_pizzamargherita_xhm1p-2_1200.jpg?h=faa3bae42d7180a508c490395249247ded3f362c",
-			"category": "pizza",
-			"id": 2
-		},
-		{
-			"title": "Pizza Napoletana",
-			"price": 13,
-			"url": "https://www.pizzanapoletana.org/struttura/pagine_bicolor/mobile/decalogo_avpn_1.jpg",
-			"category": "pizza",
-			"id": 3
-		},
-		{
-			"title": "Greece salad",
-			"price": 8,
-			"url": "https://assets.epicurious.com/photos/576454fb42e4a5ed66d1df6b/master/pass/greek-salad.jpg",
-			"category": "salads",
-			"id": 4
-		},
-		{
-			"title": "Cowboy Steak",
-			"price": 25,
-			"url": "https://i.cbc.ca/1.4491288.1516208229!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_780/cowboysteak.jpg",
-			"category": "meat",
-			"id": 5
-		}
-	]
+  "menu": [
+    {
+      "title": "Cesar salad",
+      "price": 12,
+      "url": "https://static.1000.menu/img/content/21458/-salat-cezar-s-kr-salat-cezar-s-krevetkami-s-maionezom_1501173720_1_max.jpg",
+      "category": "salads",
+      "id": 1
+    },
+    {
+      "title": "Pizza Margherita",
+      "price": 10,
+      "url": "https://image.freepik.com/free-photo/pizza-margarita-on-the-table_140725-5394.jpg",
+      "category": "pizza",
+      "id": 2
+    },
+    {
+      "title": "Pizza Napoletana",
+      "price": 13,
+      "url": "https://www.pizzanapoletana.org/struttura/pagine_bicolor/mobile/decalogo_avpn_1.jpg",
+      "category": "pizza",
+      "id": 3
+    },
+    {
+      "title": "Greece salad",
+      "price": 8,
+      "url": "https://assets.epicurious.com/photos/576454fb42e4a5ed66d1df6b/master/pass/greek-salad.jpg",
+      "category": "salads",
+      "id": 4
+    },
+    {
+      "title": "Cowboy Steak",
+      "price": 25,
+      "url": "https://i.cbc.ca/1.4491288.1516208229!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_780/cowboysteak.jpg",
+      "category": "meat",
+      "id": 5
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "order": {
+        "type": "NEW_ORDER",
+        "order": [
+          {
+            "title": "Cesar salad",
+            "id": 1,
+            "qtt": 5
+          },
+          {
+            "title": "Greece salad",
+            "id": 4,
+            "qtt": 3
+          },
+          {
+            "title": "Cowboy Steak",
+            "id": 5,
+            "qtt": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "order": {
+        "type": "NEW_ORDER",
+        "order": [
+          {
+            "title": "Pizza Margherita",
+            "id": 2,
+            "qtt": 2
+          },
+          {
+            "title": "Pizza Napoletana",
+            "id": 3,
+            "qtt": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "order": {
+        "type": "NEW_ORDER",
+        "order": [
+          {
+            "title": "Pizza Margherita",
+            "id": 2,
+            "qtt": 2
+          },
+          {
+            "title": "Cesar salad",
+            "id": 1,
+            "qtt": 1
+          },
+          {
+            "title": "Pizza Napoletana",
+            "id": 3,
+            "qtt": 1
+          },
+          {
+            "title": "Greece salad",
+            "id": 4,
+            "qtt": 2
+          }
+        ]
+      }
+    }
+  ]
 }

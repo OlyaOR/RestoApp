@@ -1,20 +1,61 @@
-import React from 'react';
+import React, {Component} from 'react';
+import { connect } from 'react-redux';
+import {deleteFromCart, generateOrder, deleteCart} from '../../actions';
+import WithRestoService from '../hoc';
+
 import './cart-table.scss';
 
-const CartTable = () => {
-    return (
-        <>
-            <div className="cart__title">Ваш заказ:</div>
-            <div className="cart__list">
-                <div className="cart__item">
-                    <img src="https://static.1000.menu/img/content/21458/-salat-cezar-s-kr-salat-cezar-s-krevetkami-s-maionezom_1501173720_1_max.jpg" className="cart__item-img" alt="Cesar salad"></img>
-                    <div className="cart__item-title">Cesar salad</div>
-                    <div className="cart__item-price">12$</div>
-                    <div className="cart__close">&times;</div>
-                </div>
-            </div>
-        </>
-    );
+class CartTable extends Component {
+    
+    render() {
+        const {items, RestoService, deleteFromCart, deleteCart} = this.props
+        console.log(items);
+        console.log(items.length);
+        if (items.length === 0) {
+            return (
+                <div className="cart__title">Пока тут ничего нет. Пожалуйста перейдите в меню и сделайте свой выбор.</div>
+            )
+        };
+        return (
+            <>
+                <div className="cart__title">Ваш заказ:</div>
+                    <div className="cart__list">
+                    {
+                        items.map( item => {
+                            const {price, title, url, id, qtt} = item;
+                            return (
+                                <div key = {id} className="cart__item">
+                                    <img src={url} className="cart__item-img" alt={title}></img>
+                                    <div className="cart__item-title">{title}</div>
+                                    <div className="cart__item-price">{price * qtt}$</div>
+                                    <div className="cart__item-qtt">X{qtt}</div>
+                                    <div onClick = {() => deleteFromCart(id)}className="cart__close">&times;</div>
+                                </div>
+                            );
+                        })
+                    }
+                    </div>
+                    <div className="cart__item-btn">
+                        <button onClick = {() => deleteCart(RestoService.setOrder(generateOrder(items))) }>Make Order</button>
+                    </div>
+            </>
+        )
+    }
 };
 
-export default CartTable;
+
+const mapDispatchToProps = {
+    deleteFromCart,
+    generateOrder,
+    deleteCart
+
+}
+
+const mapStateToProps = ({items}) => {
+    return{
+        items 
+    }
+};
+
+export default WithRestoService()(connect(mapStateToProps, mapDispatchToProps)(CartTable));
+

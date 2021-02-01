@@ -21,7 +21,7 @@
         border: 1px solid rgba(256,256,256, .2);
         background-color: rgba(0,0,0,.7);
         box-shadow: 0 0 20px rgba(256,256,256, .1);
-        &-title, &-price  {
+        &-title, &-price, &-qtt  {
             width: 250px;
             text-align: center;
             color: #fff;
@@ -31,6 +31,24 @@
             height: 125px;
             width: 250px;
             object-fit: cover;
+        }
+        &-btn {
+            display: flex;
+            justify-content: space-around;
+            width: 500px;
+            margin: 0 auto;
+            button {
+                margin: 20px auto;
+                width: 200px;
+                height: 40px;
+                border: none;
+                background-color: #29a745;
+                border-radius: 4px;
+                color: #fff;
+                font-size: 16px;
+                cursor: pointer;
+            }
+            
         }
     }
     &__close {
