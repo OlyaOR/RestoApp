@@ -105,6 +105,29 @@
           }
         ]
       }
+    },
+    {
+      "id": 4,
+      "order": {
+        "type": "NEW_ORDER",
+        "order": [
+          {
+            "title": "Cesar salad",
+            "id": 1,
+            "qtt": 3
+          },
+          {
+            "title": "Pizza Napoletana",
+            "id": 3,
+            "qtt": 1
+          },
+          {
+            "title": "Greece salad",
+            "id": 4,
+            "qtt": 1
+          }
+        ]
+      }
     }
   ]
 }
