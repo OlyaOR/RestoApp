@@ -32,7 +32,7 @@ const deleteCart = () => {
     const arr = [];
     return {
         type: 'ITEM_REMOVE_CART',
-        payload: arr
+        payload: arr,
     }
 }
 const generateOrder = (items) => {
@@ -48,7 +48,17 @@ const generateOrder = (items) => {
         order
     }
 }
-
+const getOrderId = (num) => {
+    return {
+        type: 'ORDER_ID',
+        payload: num
+    }
+}
+const restart = () => {
+    return {
+        type: 'AT_START'
+    }
+}
 export {
     menuLoaded,
     menuRequested,
@@ -56,5 +66,7 @@ export {
     addedToCart,
     deleteFromCart,
     generateOrder,
-    deleteCart
+    deleteCart,
+    getOrderId,
+    restart
 };

@@ -4,7 +4,9 @@ const initialState = {
     error: false,
     items: [],
     totalPrice: 0,
-    newOrder: []
+    newOrder: [],
+    isNumber: false,
+    orderNum:0
 };
 const reducer = (state = initialState, action) => {
     switch(action.type) {
@@ -92,6 +94,18 @@ const reducer = (state = initialState, action) => {
             return { 
                 ...state,
                 totalPrice: pricee,
+                isNumber: true
+            };
+        case 'ORDER_ID':
+            return { 
+                ...state,
+                isNumber: false,
+                orderNum: action.payload
+            };
+        case 'AT_START':
+            return { 
+                ...state,
+                isNumber: false,
                 items: []
             };
         default: 
