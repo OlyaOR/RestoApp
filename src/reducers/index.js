@@ -4,8 +4,7 @@ const initialState = {
     error: false,
     items: [],
     totalPrice: 0,
-    newOrder: [],
-    order: []
+    newOrder: []
 };
 const reducer = (state = initialState, action) => {
     switch(action.type) {
@@ -74,7 +73,7 @@ const reducer = (state = initialState, action) => {
         case 'ITEM_REMOVE_FROM_CART':
             const idx = action.payload;
             const itemIndex = state.items.findIndex(item => item.id === idx)
-            const price = state.items[itemIndex]['price'];
+            const price = state.items[itemIndex]['price'] * state.items[itemIndex]['qtt'];
             return {
                 ...state, 
                 items: [

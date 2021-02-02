@@ -8,6 +8,17 @@
         text-align: center;
         font-weight: 300;
     }
+    &__answer {
+        width: 400px;
+        background-color: #fff;
+        box-shadow: 5px 5px 45px rgba(256,256,256,.1);
+        border-radius: 8px;
+        padding: 20px;
+        margin: 0 auto;
+        font-size: 30px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
     &__list {
         width: 60%;
         margin: 0 auto;
@@ -33,22 +44,16 @@
             object-fit: cover;
         }
         &-btn {
-            display: flex;
-            justify-content: space-around;
-            width: 500px;
-            margin: 0 auto;
-            button {
-                margin: 20px auto;
-                width: 200px;
-                height: 40px;
-                border: none;
-                background-color: #29a745;
-                border-radius: 4px;
-                color: #fff;
-                font-size: 16px;
-                cursor: pointer;
-            }
-            
+            display: block;
+            margin: 20px auto;
+            width: 250px;
+            height: 40px;
+            border: none;
+            background-color: #29a745;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
         }
     }
     &__close {

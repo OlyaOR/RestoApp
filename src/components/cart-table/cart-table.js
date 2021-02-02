@@ -6,14 +6,15 @@ import WithRestoService from '../hoc';
 import './cart-table.scss';
 
 class CartTable extends Component {
-    
     render() {
-        const {items, RestoService, deleteFromCart, deleteCart} = this.props
-        console.log(items);
-        console.log(items.length);
+        const {items, RestoService, deleteFromCart, deleteCart} = this.props;
+
         if (items.length === 0) {
             return (
-                <div className="cart__title">Пока тут ничего нет. Пожалуйста перейдите в меню и сделайте свой выбор.</div>
+                <>
+                    <div className="cart__title">Пока тут ничего нет. Пожалуйста перейдите в меню и сделайте свой выбор.</div>
+                    {/* <div className="cart__answer">Ваш заказ ...</div> */}
+                </>
             )
         };
         return (
@@ -35,9 +36,7 @@ class CartTable extends Component {
                         })
                     }
                     </div>
-                    <div className="cart__item-btn">
-                        <button onClick = {() => deleteCart(RestoService.setOrder(generateOrder(items))) }>Make Order</button>
-                    </div>
+                    <button onClick = {() => deleteCart(RestoService.setOrder(generateOrder(items)))} className="cart__item-btn">Make Order</button>
             </>
         )
     }
@@ -58,4 +57,3 @@ const mapStateToProps = ({items}) => {
 };
 
 export default WithRestoService()(connect(mapStateToProps, mapDispatchToProps)(CartTable));
-

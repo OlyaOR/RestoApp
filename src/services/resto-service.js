@@ -13,7 +13,6 @@ export default class RestoService{
     async getMenuItems () {
         return await this.getResource('/menu/');
     }
-
     async setOrder(order) {
         const number = await this.getOrderNumber();
         const newOrder = {
