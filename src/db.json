@@ -141,6 +141,52 @@
           }
         ]
       }
+    },
+    {
+      "id": 6,
+      "order": {
+        "type": "NEW_ORDER",
+        "order": [
+          {
+            "title": "Pizza Napoletana",
+            "id": 3,
+            "qtt": 1
+          },
+          {
+            "title": "Pizza Margherita",
+            "id": 2,
+            "qtt": 1
+          },
+          {
+            "title": "Cesar salad",
+            "id": 1,
+            "qtt": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "order": {
+        "type": "NEW_ORDER",
+        "order": [
+          {
+            "title": "Cesar salad",
+            "id": 1,
+            "qtt": 1
+          },
+          {
+            "title": "Cowboy Steak",
+            "id": 5,
+            "qtt": 1
+          },
+          {
+            "title": "Greece salad",
+            "id": 4,
+            "qtt": 1
+          }
+        ]
+      }
     }
   ]
 }

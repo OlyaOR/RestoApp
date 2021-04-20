@@ -14,8 +14,6 @@ class CartTable extends Component {
     }
     render() {
         const {items, RestoService, deleteFromCart, deleteCart, isNumber, orderNum, restart} = this.props;
-        console.log(isNumber);
-        console.log(orderNum);
         if (items.length === 0 && !isNumber) {
             return (
                 <div className="cart__title">Пока тут ничего нет. Пожалуйста перейдите в меню и сделайте свой выбор.</div>
