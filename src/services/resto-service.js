@@ -1,5 +1,5 @@
 export default class RestoService{
-    _apiBase = 'http://localhost:3000';
+    _apiBase = 'https://my-json-server.typicode.com/OlyaOR/dbforRestoApp';
 
     async getResource(url) {
         const res = await fetch(`${this._apiBase}${url}`);
@@ -11,7 +11,7 @@ export default class RestoService{
     }
 
     async getMenuItems () {
-        return await this.getResource('/menu');
+        return await this.getResource('/menu/');
     }
     async setOrder(order) {
         const number = await this.getOrderNumber();
@@ -19,7 +19,7 @@ export default class RestoService{
             id: number,
             order: order
         }
-        const response = await fetch(`${this._apiBase}/orders`, {
+        const response = await fetch(`${this._apiBase}/orders/`, {
             method: 'POST', 
             headers: {
                 'Content-Type': 'application/json;charset=utf-8'
@@ -32,7 +32,7 @@ export default class RestoService{
     }
 
     async getOrderNumber(){
-        const res = await this.getResource('/orders');
+        const res = await this.getResource('/orders/');
         const orderNumber = res.length+1;
         return orderNumber
     }
